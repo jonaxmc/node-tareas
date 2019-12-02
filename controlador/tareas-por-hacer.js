@@ -41,9 +41,9 @@ const getLista = (com) => {
 //Método para actualizar una tarea
 const actualizar = (descripcion, completado = true) => {
     cargarDB(); //Carga los datos
-    let index = tareasPorHacer.findIndex(tarea => tarea.descripcion === descripcion);
+    let index = tareasPorHacer.findIndex(tarea => tarea.descripcion === descripcion); //Busca el indice de la tarea
 
-    if (index >= 0) {
+    if (index >= 0) { //Si el índice es mayor o igual que 0, el estado de esa tarea se cambiará a true
         tareasPorHacer[index].completado = completado;
         guardarDB();
         return true;
@@ -53,18 +53,18 @@ const actualizar = (descripcion, completado = true) => {
 }
 
 const borrar = (descripcion) => {
-    cargarDB();
-
-    let nuevoListado = tareasPorHacer.filter(tarea => tarea.descripcion !== descripcion);
-    if (tareasPorHacer.length === nuevoListado.length) {
+    cargarDB(); //Carga los datos
+    let nuevoListado = tareasPorHacer.filter(tarea => tarea.descripcion !== descripcion); //Filtra la tarea de acuerdo a la descripción
+    if (tareasPorHacer.length === nuevoListado.length) { //Si el tamaño de la lista filtrada es igual a la nueva lista retornara false ya que no hay coincidencias
         return false;
     } else {
-        tareasPorHacer = nuevoListado;
-        guardarDB();
+        tareasPorHacer = nuevoListado; //Caso contrario se genera la nueva lista del filtrado 
+        guardarDB(); //Guarda los datos
         return true;
     }
 }
 
+//Exportar los métodos a utilizarse
 module.exports = {
     crear,
     getLista,
