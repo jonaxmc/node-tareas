@@ -10,7 +10,7 @@ npm install
 ## -crear
 Crea una tarea, ejemplo de ejecución:
 ```
-node app crear -d Tarea 1
+node app crear -d Tarea1
 ```
 ## -listar
 Lista una tarea de acuerdo al estado en el que se encuentra, ejemplo de ejecución:
@@ -23,10 +23,10 @@ node app listar -c false
 ## -actualizar
 Cambia el estado a true(tarea completada), ejemplo de ejecución:
 ```
-node app actualizar -d Tarea 1 -c
+node app actualizar -d Tarea1 -c
 ```
 ## -borrar
 Elimina una tarea, ejemplo de ejecución:
 ```
-node app borrar -d Tarea 1 
+node app borrar -d Tarea1 
 ```
