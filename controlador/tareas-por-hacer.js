@@ -24,7 +24,7 @@ const crear = (descripcion) => {
     cargarDB(); //Carga los datos
     let tarea = { //Crea un objeto llamado tarea
         descripcion, //Descripción de la tarea
-        completado: false //Estado de la tarea
+        completado: false //Estado de la tarea, por defecto false
     };
     tareasPorHacer.push(tarea); //Sube el listado de tareas
     guardarDB(); //Guarda las tareas

@@ -16,13 +16,13 @@ switch (comando) {
         //Crear un if que imprime las tareas de acuerdo al parámetro que recibe(true o false)
         if (argv.completado === "true") { //Si el estado es true imprimirá las tareas con el valor true
             for (let tarea of listado) { //Crear un for que recorra las tareas
-                console.log("======= POR HACER =====".green);
+                console.log("======= TAREAS HECHAS =====".green);
                 console.log(tarea.descripcion); //Imprime la descripción de la tarea
                 console.log("Estado: ", tarea.completado); //Imprime el estado de la tarea
             }
         } else if (argv.completado === "false") { //Si el estado es false imprimirá las tareas con el valor false
             for (let tarea of listado) { //Crear un for que recorra las tareas
-                console.log("======= POR HACER =====".green);
+                console.log("======= TAREAS POR HACER =====".green);
                 console.log(tarea.descripcion); //Imprime la descripción de la tarea
                 console.log("Estado: ", tarea.completado); //Imprime el estado de la tarea
             }
